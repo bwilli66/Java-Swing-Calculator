@@ -81,10 +81,10 @@ public class RegisterScreen extends JFrame {
                 if(!validEmail)
                     errorMessage += "Email is not correct format (example@domain.com) \n\n";
 
-                if(!validUsername)
+                if(validUsername)
                     errorMessage += "Username is taken \n\n";
 
-                if(!validEmail || !validPassword || !validUsername || !passwordsMatch) {
+                if(!validEmail || !validPassword || validUsername || !passwordsMatch) {
                     JOptionPane.showMessageDialog(parent,
                             errorMessage,
                             "Error",

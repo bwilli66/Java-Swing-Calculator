@@ -89,8 +89,6 @@ public class LoginScreen extends JFrame{
                         // when CalcScreen gains focus, repaint()
                         parent.setVisible(false); //hide login window
                         parent.dispose(); //dispose login window
-
-
                     }
                     // else, increment lockout variable
                     else {
