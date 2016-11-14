@@ -41,12 +41,12 @@ public class LoginScreen extends JFrame{
     private void createUIComponents() {
         // TODO: place custom component creation code here
 
+        // ---------- create login buttons
         loginButton = new JButton();
         registerNewUserButton = new JButton();
 
 
         // ---------- Add Action Listeners
-
         loginButton.addActionListener(new LoginActionListener(this));
         registerNewUserButton.addActionListener(new LoginActionListener(this));
 
@@ -73,7 +73,6 @@ public class LoginScreen extends JFrame{
 
                     //System.out.println(usernNameField.getText().trim());
                     System.out.println(PasswordRecoveryScreen.username);
-                    //System.out.println("WTF");
 
                     //System.out.println(Logic.JavaDatabaseAPI.getAccountInfo(usernNameField.getText().trim())[1]);
 
@@ -86,7 +85,7 @@ public class LoginScreen extends JFrame{
                         CalculatorScreen.loggedIn = true;
                         CalculatorScreen.username = usernNameField.getText().trim();
                         //CalculatorScreen.updatLabel(usernNameField.getText());
-                        // when CalcScreen gains focus, repaint()
+                        //when CalcScreen gains focus, repaint()
                         parent.setVisible(false); //hide login window
                         parent.dispose(); //dispose login window
                     }
