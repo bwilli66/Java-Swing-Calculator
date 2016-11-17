@@ -1,4 +1,4 @@
 *.iml
 .idea
-lib
-out
+lib/
+out/

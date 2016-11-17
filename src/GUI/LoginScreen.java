@@ -14,6 +14,8 @@ import java.beans.PropertyChangeListener;
  *
  */
 public class LoginScreen extends JFrame{
+
+    public static CalculatorScreen calcScreen;
     private JPanel mainPanel;
     private JTextField usernNameField;
     private JPasswordField passwordField;
@@ -82,10 +84,12 @@ public class LoginScreen extends JFrame{
                 else {
                     // check database to see if login credentials are valid
                     if (JavaDatabaseAPI.loginAuth(usernNameField.getText().trim(), passwordField.getText().trim())) {
-                        CalculatorScreen.loggedIn = true;
-                        CalculatorScreen.username = usernNameField.getText().trim();
-                        //CalculatorScreen.updatLabel(usernNameField.getText());
-                        //when CalcScreen gains focus, repaint()
+                        parent.calcScreen.loggedIn = true;
+                        parent.calcScreen.username = usernNameField.getText().trim();
+                        parent.calcScreen.updateLabel(usernNameField.getText().trim());
+                        parent.calcScreen.revalidate();
+                        parent.calcScreen.repaint();
+
                         parent.setVisible(false); //hide login window
                         parent.dispose(); //dispose login window
                     }

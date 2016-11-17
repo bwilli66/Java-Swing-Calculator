@@ -90,6 +90,7 @@ public class CalculatorScreen extends JFrame
                 GradientPaint gp = new GradientPaint(0, 0, color1, 0, height, color2);
                 g2d.setPaint(gp);
                 g2d.fillRect(0, 0, width, height);
+
             }
         };
 
