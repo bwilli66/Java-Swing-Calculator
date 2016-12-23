@@ -29,8 +29,8 @@ public abstract class GmailAPI implements EmailHandler {
     public static String sendMessage(String email){
 
         String generatedPassword = generatePassword();
-        final String username = "bradwilliamsvi@gmail.com";
-        final String password = "drums666";
+        final String username = "********@***.com";
+        final String password = "***********";
         final String recipient = email;
 
         Properties props = new Properties();
